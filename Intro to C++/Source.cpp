@@ -23,6 +23,7 @@ int main()
 	std::cout << '4' << std::endl;
 	std::cout << '5' << std::endl;
 	
+	std::cout << "Firecraker" << std::endl;
 	std::cout << "5\n4\n3\n2\n1\n0" << std::endl;
 		system("pause");
 } 
