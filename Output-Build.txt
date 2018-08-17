@@ -1,0 +1,7 @@
+﻿1>------ Build started: Project: introcpp, Configuration: Debug Win32 ------
+2>------ Build started: Project: vairables, Configuration: Debug Win32 ------
+2>vairables.cpp
+1>Sourcecpp.cpp
+2>vairables.vcxproj -> C:\Users\s188044\source\repos\Intro cpp Jordon C\Debug\vairables.exe
+1>introcpp.vcxproj -> C:\Users\s188044\source\repos\Intro cpp Jordon C\Debug\introcpp.exe
+========== Build: 2 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
