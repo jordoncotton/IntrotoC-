@@ -174,15 +174,15 @@ int main()
 		// ...
 		// Conforming to Conventions)
 		int age;
-		int bulletCount;
-		float dogYears;
+		int bullet_count;
+		float dog_years;
 		int qty;
-		float shieldValue;
-		float defenseMatrixCooldown;
-		int redArmorValue;
-		float redArmorRatio;
+		float shield_value;
+		float defense_matrix_cooldown;
+		int red_armor_value;
+		float red_armor_ratio;
 		int happiness;
-		int gandhiAggression;
+		int gandhi_aggression;
 		// ...
 	}
 
@@ -190,7 +190,13 @@ int main()
 		// main.cpp/main()
 		// ...
 		// The Right Tool for the Job)
-		int num; // integer
+		int num; // bool- stores either value true or false.
+		// char- Typically a single octet(one byte). This is an integer type.
+		// int- The most natural size of integer for the machine.
+		// float- A single-precision flaoting point value.
+		// double- A double-precision floating point value.
+		// void- Represents the absence of type.
+		//wchar_t- A wide character type.
 		float num2; // single precision floating point
 					// ...
 
