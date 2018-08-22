@@ -18,5 +18,8 @@
     <ClCompile Include="variables.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="conditionals.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
