@@ -1,6 +1,6 @@
 #include <iostream>
 
-int main()\
+int main()
 {
 	{
 		int number;
@@ -230,9 +230,9 @@ int main()\
 	std::cout << "Enter number/n.";
 	std::cin >> input;
 	if (input % 3 == 0 && input % 5 == 0)
-		{
-			std::cout << "fizzbuzz";
-		}
+	{
+		std::cout << "fizzbuzz";
+	}
 	else if (input % 3 == 0)
 	{
 		std::cout << "fizz";
@@ -242,10 +242,10 @@ int main()\
 		std::cout << "buzz";
 	}
 	system("pause");
-	
+
 	{
 
-		
+
 		int lhs, rhs;
 		char op;
 		std::cout << "Enter two numbers\n.";
@@ -259,12 +259,12 @@ int main()\
 			std::cout << lhs + rhs << std::endl;
 			break;
 		case '-':
-				//Do stuff
-				std::cout << lhs - rhs << std::endl;
-				break;
-			default:
-				std::cout << "Invalid math operation";
-				break;
+			//Do stuff
+			std::cout << lhs - rhs << std::endl;
+			break;
+		default:
+			std::cout << "Invalid math operation";
+			break;
 		}
 		system("pause");
 
@@ -283,10 +283,10 @@ int main()\
 			{
 				std::cout << "You are dead";
 			}
-		} 
+		}
 	}	system("pause");
 
-	{
+	{	//1
 		int x;
 		int y;
 		if (y = 0)
@@ -296,9 +296,9 @@ int main()\
 		}
 		else if (y = 0)
 			//statement two
-			{
-				x = 100;
-			}
+		{
+			x = 100;
+		}
 		//2 
 		int num1, num2;
 		std::cout << "Enter two numbers";
@@ -312,42 +312,80 @@ int main()\
 			std::cout << num2;
 		}
 		//3
+		int aa;
+		int bb; 
+		int cc;
+		int dd;
+		int ee;
 		
+		std::cout << "Input 5 whole numbers";
+		std::cin >> aa;
+		std::cin >> bb;
+		std::cin >> cc;
+		std::cin >> dd;
+		std::cin >> ee;
+
+		if ((aa + bb + cc + dd + ee) > 0)
+			if (aa < bb && aa < cc && aa < dd && aa < ee)
+			{
+				//AA
+				std::cout << aa;
+				if (bb < cc && bb < dd && bb < ee)
+				{//1b
+					std::cout << bb;
+					if (cc < dd && cc < ee)
+					{
+						std::wcout << cc;
+						if (dd < ee)
+						{
+							std::cout << dd;
+							std::cout << ee;
+						}
+						else
+						{
+						std::cout << ee;
+						std::cout << dd;
+						//path ends here
+						}
+					}
+
+				}
+			}
 		//4 
 		{
 			int choice;
 			std::cin >> choice;
-			switch (choice) 
+			switch (choice)
 			{
-			case 0: 
+			case 0:
 			{
 				std::cout << "1";
 			}
-					break;
-			case 1: 
+			break;
+			case 1:
 
 			{
 				std::cout << "2 or 3";
 			}
-					break;
-			case 2: 
+			break;
+			case 2:
 
 			{
 				std::cout << "4";
 			}
-					break;
+			break;
 			default:
 			{
 				std::cout << "Invalid";
 			}
 			break;
 			}system("pause");
-	
+
 		}
 		//5
-		{ 
+		{
 			int x = 0;
-			y = (x == 0) ? 0 : (10/x);
+			y = (x == 0) ? 0 : (10 / x);
 			if (x == 0)
 			{
 				y = 0;
@@ -395,48 +433,150 @@ int main()\
 				system("pause");
 			}
 		}
-			//7
+		//7
+		{
 			{
+				int choice;
+				std::cin >> choice;
+				switch (choice)
 				{
-					int choice;
-					std::cin >> choice;
-					switch (choice)
-					{
-					case 1:
-					{
-						std::cout << "janurary-31 days";
-					}
-					break;
-					case 2:
-
-					{
-						std::cout << "Feburary-25 days";
-					}
-					break;
-					case 3:
-
-					{
-						std::cout << "March-24 days";
-					}
-					break;
-					case 4:
-					{
-						std::cout << "April-23 days";
-					}
-					break;
-					case 5: 
-					{
-						std::cout << "May-27 days";
-					}
-					break;
-					default:
-					{
-						std::cout << "Invalid";
-					}
-					break;
-					}system("pause");
-
+				case 1:
+				{
+					std::cout << "janurary-31 days";
 				}
+				break;
+				case 2:
+
+				{
+					std::cout << "Feburary-28 days";
+				}
+				break;
+				case 3:
+
+				{
+					std::cout << "March-31 days";
+				}
+				break;
+				case 4:
+				{
+					std::cout << "April-30 days";
+				}
+				break;
+				case 5:
+				{
+					std::cout << "May-31 days";
+				}
+				break;
+				
+				case 6:
+				{
+					std::cout << "June-30 days";
+				}
+				break;
+				case 7:
+				{
+					std::cout << "July-31 days";
+				}
+				break;
+				case 8:
+				{
+					std::cout << "August-31 days";
+				}
+				break;
+				case 9:
+				{
+					std::cout << "September-30 days";
+				}
+				break;
+				case 10:
+				{
+					std::cout << "October-31 days";
+				}
+				break;
+				case 11:
+				{
+					std::cout << "November-30 days";
+				}
+				break;
+				case 12:
+				{
+					std::cout << "December-31 days";
+				}
+				break;
+
+				default:
+				{
+					std::cout << "Invalid";
+				}
+				break;
+				}system("pause");
+
 			}
+		} //8
+		{
+			int numPos = 35, numNeg = -55;
+			{
+				std::cout << "true";
+			}
+			char frstChar = 'B', scndChar = 'P';
+			{
+				std::cout << "true";
+			}
+			//c 
+			{
+				std::cout << "c. false/n";
+			}
+			//d
+			{
+				std::cout << "d. true/n";
+			}
+			//e
+			{
+				std::cout << "e. true/n";
+			}
+			//f
+			{
+				std::cout << "f. false/n";
+			}
+			//g
+			{
+				std::cout << "g. true/n";
+			}
+			//h
+			{
+				std::cout << "h. false/n";
+			}
+			//i
+			{
+				std::cout << "i. true/n";
+			}
+			//j
+			{
+				std::cout << "j. true/n";
+			}
+
+		}
+		//9
+		//a
+		{
+			std::cout << "a. true || false/n";
+		}
+		//b 
+		{
+			std::cout << "b. true && false || false/n";
+		}
+		//c
+		{
+			std::cout << "c. true/n";
+		}
+		//d
+		{
+			std::cout << "d. false/n";
+		}
+		//e
+		{
+			std::cout << "e. true/n";
+		}
+
 	}
-}		
+}
