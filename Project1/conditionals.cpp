@@ -437,6 +437,75 @@ int main()\
 					}system("pause");
 
 				}
+			}//8
+			{
+				int numPos = 35, numNeg = -55;
+				//a
+				{
+					std::cout << "true";
+				}
+				char frstChar = 'B', scndChar = 'P';
+				//b
+				{
+					std::cout << "true";
+				}
+				//c 
+				{
+					std::cout << "c. false/n";
+				}
+				//d
+				{
+					std::cout << "d. true/n";
+				}
+				//e
+				{
+					std::cout << "e. true/n";
+				}
+				//f
+				{
+					std::cout << "f. false/n";
+				}
+				//g
+				{
+					std::cout << "g. true/n";
+				}
+				//h
+				{
+					std::cout << "h. false/n";
+				}
+				//i
+				{
+					std::cout << "i. true/n";
+				}
+				//j
+				{
+					std::cout << "j. true/n";
+				}
+
 			}
+			//9
+			//a
+			{
+				std::cout << "a. true || false/n";
+			}
+			//b 
+			{
+				std::cout << "b. true && false || false/n";
+			}
+			//c
+			{
+				std::cout << "c. true/n";
+			}
+			//d
+			{
+				std::cout << "d. false/n";
+			}
+			//e
+			{
+				std::cout << "e. true/n";
+			}
+
 	}
-}		
+}
+	
+		
