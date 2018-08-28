@@ -12,24 +12,26 @@ int main()
 		std::cout << myFirstName[i] << std::endl;
 	}
 
-	return 0;
-
-	int inputs[5];
-	for (int i = 0; i < 5; i++)
-		int myArray[5] = { 12, 21, 3, 7, 13 };
-	int number[5];
-	int number2[5];
-	int myArray[5];
-	{
-		std::cout << myArray[5] << std::endl;
-	}
+	//{
+	//	int inputs[5];
+	//	for (int i = 0; i < 5; i++)
+	//	{
+	//		int myArray[5] = { 12, 21, 3, 7, 13 };
+	//	}
+	//	//int number[5];
+	//	//int number2[5];
+	//	//int myArray[5];
+	//	std::cout << myArray[5] << std::endl;
+	//}
 
 	//2, 4, 6, 8, 10, 12, 14, 16, 18
-	int myArray[10];
-	int count = 0;
-	for (int i = 0; i < 20; i = i + 2)
 	{
-		myArray[count++] = i;
+		int myArray[10];
+		int count = 0;
+		for (int i = 0; i < 20; i = i + 2)
+		{
+			myArray[count++] = i;
+		}
 	}
 	system("pause");
 
@@ -59,67 +61,103 @@ int main()
 		int hours[3] = 8, 12, 16;*/ //(valid)
 
 		//2
-
+	{
 		int values[] = { 2, 6, 10, 14 };
-		std::cout << values[2]; /*10*/
-		std::cout << ++values[0]; /*3*/
-		std::cout << values[1]++; /*6*/
-							  //x = 2 /*undefined*/
-							  //std::cout << values[++x] = /*undefined*/
-		std::cout << values[4]; /*undefined number*/
-
+		{
+			std::cout << values[2] << std::endl; //10
+			std::cout << ++values[0] << std::endl; //3
+			std::cout << values[1]++ << std::endl; //6
+			int x = 2;
+			std::cout << values[++x] << std::endl; //14
+			std::cout << values[4] << std::endl; //uninitialize number
+		}
+	}
+	
 		//3
 
 		int data[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 		for (int i = 0; i < 10; ++i);
 
 		//4
-
-		int myNum[5] = { 3, 6, 9, 12, 15 };
-		for (int i = 4; i >= 0; i--)
 		{
-			std::cout << myNum[5];
+			int myNum[5] = { 3, 6, 9, 12, 15 };
+			for (int i = 4; i >= 0; i--)
+			{
+				std::cout << myNum[i] << std::endl;
+			}
 		}
-
-		//5
-
-		int myArray[10] = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
-		for (int i = 0; i < 10; i++)
 		{
-			for (int j = 0; j < 10; j++)
+			//5
+
+			int myArray[10];
 			{
 				std::cout << "Insert 10 numbers" << std::endl;
-				std::cin >> myArray[10];
 			}
-			int largest = myArray[100];
-			int smallest = myArray[10];
-
 			for (int j = 0; j < 10; j++)
 			{
-				if (myArray[10] > myArray[10])
-					largest = myArray[j];
+				std::cin >> myArray[j];
+			}
+			for (int i = 0; i < 10; i++)
+			{
+				for (int j = 0; j < 10; j++)
 				{
-					std::cout << myArray[10];
-				}
-				if (myArray[10] < myArray[10])
-					smallest = myArray[i];
-				
-			}return 0;
-		}
-		
+					if (myArray[i] < myArray[j])
+					{
+						int temp = myArray[j];
+						myArray[j] = myArray[i];
+						myArray[i] = temp;
+					}
 
+				}
+			}
+			std::cout << "largest" << myArray[0] << std::endl;
+			std::cout << "smallest" << myArray[9] << std::endl;
+			system("pause");
+		}
 
 		//6
 		{
-			int moreNum[9][4] = { { 1, 2, 3},{4, 5, 6},{7, 8, 9} };
-			for (int i = 0; i < 9; i++)
+			int green = 1;
+			int moreNum[3][3];
+			for (int i = 0; i < 3; i++)
 			{
-				for (int x = 0; x < 4; x++)
+				for (int x = 0; x < 3; x++)
 				{
-					std::cout << moreNum[i][x] << std::endl;
+					moreNum[i][x] = green;
+					green++;
 				}
 			}
+			for (int i = 0; i < 3; i++)
+			{
+				std::cout << moreNum[0][i];
+			}
+			std::cout << std::endl;
+			for (int i = 0; i < 3; i++)
+			{
+				std::cout << moreNum[1][i];
+			}
+			std::cout << std::endl;
+			for (int i = 0; i < 3; i++)
+			{
+				std::cout << moreNum[2][i];
+			}
+			std::cout << std::endl;
+			system("pause");
 		}
-		
+
+		//7
+		{
+
+
+
+
+
+
+
+
+
+
+		}
+
 
 }
