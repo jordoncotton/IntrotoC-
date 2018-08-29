@@ -48,5 +48,23 @@ int main()
 			}
 		}
 	}
+
+	//Homework
+
+	//1
+	//Create a program that asks for the user’s first and last name and store it in one string.It
+	//must be able to handle spaces in the input.
+
+	char stuff[255];
+	std::cin.getline(stuff, 255);
+
+	//2
+	//Output the name in reverse order
+	for(int )
+
+	std::cout << "reverse order" << std::endl;
+	std::cin.getline(stuff, 255, )
 }
+
+
 	
