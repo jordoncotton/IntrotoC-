@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{C2EA384E-FE2F-45AC-8504-3F59DA9364FF}</ProjectGuid>
-    <RootNamespace>arrays</RootNamespace>
+    <ProjectGuid>{0E813207-BDFE-4CAA-A995-EB9E259496FE}</ProjectGuid>
+    <RootNamespace>chararray</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
