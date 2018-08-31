@@ -60,10 +60,10 @@ int main()
 
 	//2
 	//Output the name in reverse order
-	for(int )
+	for(int i = 0; i < 255; i++)
 
 	std::cout << "reverse order" << std::endl;
-	std::cin.getline(stuff, 255, )
+	std::cin.getline(stuff, 255,);
 }
 
 

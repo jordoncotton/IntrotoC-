@@ -147,8 +147,17 @@ int main()
 
 		//7
 		{
+			int days[29][5];
+			int sum = 0; 
 
-			int[29][5]
+			std::cout << "Enter 9 elements of 29*5" << std::endl;
+			for (int i = 0; i < sum; i++)
+				for (int q = 0; q < 29; q++)
+				std:: cin >> i[29][5];
+
+			{
+				
+			}
 
 
 
