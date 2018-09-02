@@ -48,19 +48,19 @@ int main()
 		}
 	}
 
-		//Homework	
-		//1
-	
-		/*int numbers[10] = { 0, 0, 1, 0, 0, 1, 0, 0, 1, 1 }; (valid)
-		int matrix[5] = { 1, 2, 3, 4, 5, 6, 7 }; (valid)
-		double radii[10] = (3.2, 4.7}; Should not have decimals
-		int table[7] = { 2, , , 27, , 45, 39 }; Not multiples of 7
-		char codes[] = { 'A', 'X', '1', '2', 's' }; (valid)
-		int blanks[]; (valid)
-		int collection[-20]; There is no declaration for negative
-		int hours[3] = 8, 12, 16;*/ //(valid)
+	//Homework	
+	//1
 
-		//2
+	/*int numbers[10] = { 0, 0, 1, 0, 0, 1, 0, 0, 1, 1 }; (valid)
+	int matrix[5] = { 1, 2, 3, 4, 5, 6, 7 }; (valid)
+	double radii[10] = (3.2, 4.7}; Should not have decimals
+	int table[7] = { 2, , , 27, , 45, 39 }; Not multiples of 7
+	char codes[] = { 'A', 'X', '1', '2', 's' }; (valid)
+	int blanks[]; (valid)
+	int collection[-20]; There is no declaration for negative
+	int hours[3] = 8, 12, 16;*/ //(valid)
+
+	//2
 	{
 		int values[] = { 2, 6, 10, 14 };
 		{
@@ -72,101 +72,108 @@ int main()
 			std::cout << values[4] << std::endl; //uninitialize number
 		}
 	}
-	
-		//3
 
-		int data[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-		for (int i = 0; i < 10; ++i);
+	//3
 
-		//4
+	int data[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+	for (int i = 0; i < 10; ++i);
+
+	//4
+	{
+		int myNum[5] = { 3, 6, 9, 12, 15 };
+		for (int i = 4; i >= 0; i--)
 		{
-			int myNum[5] = { 3, 6, 9, 12, 15 };
-			for (int i = 4; i >= 0; i--)
-			{
-				std::cout << myNum[i] << std::endl;
-			}
+			std::cout << myNum[i] << std::endl;
 		}
-		{
-			//5
+	}
+	{
+		//5
 
-			int myArray[10];
-			{
-				std::cout << "Insert 10 numbers" << std::endl;
-			}
+		int myArray[10];
+		{
+			std::cout << "Insert 10 numbers" << std::endl;
+		}
+		for (int j = 0; j < 10; j++)
+		{
+			std::cin >> myArray[j];
+		}
+		for (int i = 0; i < 10; i++)
+		{
 			for (int j = 0; j < 10; j++)
 			{
-				std::cin >> myArray[j];
-			}
-			for (int i = 0; i < 10; i++)
-			{
-				for (int j = 0; j < 10; j++)
+				if (myArray[i] < myArray[j])
 				{
-					if (myArray[i] < myArray[j])
-					{
-						int temp = myArray[j];
-						myArray[j] = myArray[i];
-						myArray[i] = temp;
-					}
-
+					int temp = myArray[j];
+					myArray[j] = myArray[i];
+					myArray[i] = temp;
 				}
-			}
-			std::cout << "largest" << myArray[0] << std::endl;
-			std::cout << "smallest" << myArray[9] << std::endl;
-			system("pause");
-		}
 
-		//6
+			}
+		}
+		std::cout << "largest" << myArray[0] << std::endl;
+		std::cout << "smallest" << myArray[9] << std::endl;
+		system("pause");
+	}
+
+	//6
+	{
+		int green = 1;
+		int moreNum[3][3];
+		for (int i = 0; i < 3; i++)
 		{
-			int green = 1;
-			int moreNum[3][3];
-			for (int i = 0; i < 3; i++)
+			for (int x = 0; x < 3; x++)
 			{
-				for (int x = 0; x < 3; x++)
-				{
-					moreNum[i][x] = green;
-					green++;
-				}
+				moreNum[i][x] = green;
+				green++;
 			}
-			for (int i = 0; i < 3; i++)
-			{
-				std::cout << moreNum[0][i];
-			}
-			std::cout << std::endl;
-			for (int i = 0; i < 3; i++)
-			{
-				std::cout << moreNum[1][i];
-			}
-			std::cout << std::endl;
-			for (int i = 0; i < 3; i++)
-			{
-				std::cout << moreNum[2][i];
-			}
-			std::cout << std::endl;
-			system("pause");
 		}
-
-		//7
+		for (int i = 0; i < 3; i++)
 		{
-			int days[29][5];
-			int sum = 0; 
+			std::cout << moreNum[0][i];
+		}
+		std::cout << std::endl;
+		for (int i = 0; i < 3; i++)
+		{
+			std::cout << moreNum[1][i];
+		}
+		std::cout << std::endl;
+		for (int i = 0; i < 3; i++)
+		{
+			std::cout << moreNum[2][i];
+		}
+		std::cout << std::endl;
+		system("pause");
+	}
 
-			std::cout << "Enter 9 elements of 29*5" << std::endl;
-			for (int i = 0; i < sum; i++)
-				for (int q = 0; q < 29; q++)
-				std:: cin >> i[29][5];
+	//7
+	{
+		int days[29][5];
+		int row = 0;
+		int column;
+		int sum;
 
+		std::cout << "Enter 9 elements of 29*5" << std::endl;
+
+		for (int i = 0; i < row; i++)
+		{
+			for (int q = 0; q < 29; q++)
 			{
-				
+				std::cin >> days[i][q];
+					days++;
+			}
+		}
+		for (int i = 0; i < column; i++)
+		{
+			sum = 0;
+			for (int q = 0; q < 5; q++)
+			{
+				std::cin >> days[q][i];
+				days++;
 			}
 
-
-
-
-
-
-
-
 		}
+
+	}
 
 
 }
