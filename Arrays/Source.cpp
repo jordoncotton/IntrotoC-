@@ -86,6 +86,7 @@ int main()
 			std::cout << myNum[i] << std::endl;
 		}
 	}
+
 	{
 		//5
 
@@ -159,7 +160,7 @@ int main()
 			for (int q = 0; q < 29; q++)
 			{
 				std::cin >> days[i][q];
-					days++;
+					days;
 			}
 		}
 		for (int i = 0; i < column; i++)
@@ -168,12 +169,38 @@ int main()
 			for (int q = 0; q < 5; q++)
 			{
 				std::cin >> days[q][i];
-				days++;
+				days;
 			}
 
 		}
 
 	}
 
+	//8
+	{
+		{
+			int Health[5] = { 100, 100, 100, 100, 100 }; 
+			int Character = 0; 
+			int TimesAttacked = 0; 
 
+			while (TimesAttacked != 5) {
+				std::cout << "Select a character to take damage. Enter a number between 0 and 4: " << std::endl;
+				std::cin >> Character;
+				TimesAttacked++;
+
+				Health[Character] = Health[Character] - rand() % 100 + 1; 
+
+				if (Health[Character] <= 0) {
+					std::cout << "Could not attack, character is dead" << std::endl;
+				}
+			}
+
+			for (int i = 0; i < 5; i++) {
+				std::cout << "Parties health pools are: " << Health[i] << std::endl;
+			}
+			system("pause");
+			return 0;
+		}
+
+	}
 }
