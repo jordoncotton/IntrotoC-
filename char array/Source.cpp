@@ -151,7 +151,225 @@ int main()
 		else
 			return false;
 	}
+
+	//6
+	{
+
+	}
+
+	//7
+	{
+		1//What do you think the program is trying to achieve?
+			/* - Without C++ it's safe to say that you achieve
+			almost anything with C++*/;
+
+		2// What is the bug?
+			/*When the system acts in a way other than what
+			it was intended too*/;
+
+		3//How would you correct it?
+			/*By using the debugging tool to figure out
+			it's issue*/;
+
+		4//char name[4] = "John";
+			/*Missing the value of the type*/;
+
+		5//char name[32];
+		//cout << name;
+			/*Missing identifier for "cout"*/;
+
+		6//char name[7] = "Donald";
+		//char surname[7] = "Knuth";
+		//strcat(name, surname);
+			/*No issue*/;
+
+		7//har errorMsg[5] = "Stop";
+		//errorMsg[strlen(errorMsg)] = "!";
+		//cout << errorMsg;
+			/*Value of type char on the "=" and
+			idenitifer on the "cout"*/;
+	}
+
+	//8
+
+	{
+		inline bool vowel(char c)
+		{
+			bool vowel;
+			switch (topper(c))
+			{
+			case 'E': case 'A': case 'U': case 'O': case 'I': case 'Y':
+			{
+				vowel = true;
+			}
+			break;
+			default:
+			{
+				vowel = false;
+			}
+			}
+			return vowel;
+		}
+
+		int main(void)
+		{
+			string word;
+			string::sizeType cons;
+			const string vowels = "aeiouAEIOU";
+
+			std::cout << "\n\t\Welcome to the Pig-Latin Word Conversion Program. \n";
+			std::cout << "Please enter a word: ";
+			std::cin >> word;
+
+
+			if (isvowel(word[0]))
+			{
+				std::cout << "\nThe translation for that in Pig-Latin would be "
+					<< word << "\n";
+			}
+			else
+			{
+				std::cout << "\nThe translation for that in Pig-Latin would be ";
+			}
+
+			return 0;
+		}
+	}
+
+	{
+		//9
+		{
+			{
+				int uppercase;
+				int lowercase;
+				int total;
+				int numbers;
+
+				char array1[50];
+				int i = 0, lowercase = 0, uppercase = 0, numbers = 0, total;
+
+				std::cout << "Enter a string: " << std::endl;
+				std::cin >> array1;
+				std::cout << std::endl;
+
+				while (array1[i] != 0) {
+
+					if (array1[i] >= 'a' && array1[i] <= 'z') {
+						lowercase++;
+						i++;
+					}
+
+					else if (array1[i] >= 'A' && array1[i] <= 'Z') {
+						uppercase++;
+						i++;
+					}
+
+					else if (array1[i] >= '0' && array1[i] <= '9') {
+						numbers++;
+						i++;
+					}
+
+					else
+						i++;
+				}
+
+				total = lowercase + uppercase + numbers;
+
+				std::cout << "Your string has " << lowercase << " lowercase letters." << std::endl;
+
+				std::cout << "Your string has " << uppercase << " uppercase letters." << std::endl;
+
+				std::cout << "Your string has " << numbers << " numbers." << std::endl;
+
+				std::cout << "Your string has " << total << " total characters." << std::endl;
+			}
+		}
+	}
+
+	//10
+
+	{
+		{
+			int i, j, len, flag = 1;
+			char a[20];
+
+			std::cout << "Enter a string:";
+			std::cin >> a;
+
+			for (len = 0; a[len] != '\0'; ++len);
+
+			for (i = 0, j = len - 1; i < len / 2; ++i, --j)
+			{
+				if (a[j] != a[i])
+					flag = 0;
+			}
+
+			if (flag == 1)
+				std::cout << "\nThe string is Palindrome";
+			else
+				std::cout << "\nThe string is not Palindrome";
+
+			return 0;
+		}
+	}
+
+	//11
+
+	{
+		{
+			char s1[80], s2[80];
+
+			strcpy(s1, "C++");
+			strcpy(s2, " is power programming.");
+
+			std::cout << "lengths: " << strlen(s1);
+			std::cout << ' ' << strlen(s2) << '\n';
+
+			if (!strcmp(s1, s2))
+				std::cout << "The strings are equal\n";
+			else std::cout << "not equal\n";
+
+			strcat(s1, s2);
+			std::cout << s1 << '\n';
+
+			strcpy(s2, s1);
+			std::cout << s1 << " and " << s2 << "\n";
+
+			if (!strcmp(s1, s2))
+				std::cout << "s1 and s2 are now the same.\n";
+
+			return 0;
+		}
+	}
+
+	//12
+	/*Write a program that reads in a line of input and then displays the
+	character that appears the most frequently in that sentence*/
+	{
+
+	}
+
+	//13
+	{
+		{
+			char cMonth[2];
+			char cDay[2];
+			char cYear[4];
+
+			std::cout << "Enter a date in the form mm/dd/yyyy: ";
+
+			std::cin.get(cMonth, 3, '/');
+			std::cin.ignore(2, '/');
+			std::cin.get(cDay, 4, '/');
+			std::cin.ignore(2, '/');
+			std::cin.get(cYear, 5);
+
+			std::cout << cMonth << std::endl << cDay << std::endl << cYear << std::endl;
+			return 0;
+		}
+	}
 }
 
 
 	
+
