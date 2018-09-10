@@ -309,6 +309,68 @@ int main()
 }﻿
 
 
-//17
+//recursive Functions
+ //1
 
+/*Using recursion write a function that outputs
+the Fibonacci sequence. 1, 1, 2, 3, 5, 8, 13, 21...*/;
 
+int fibonacci(int n)
+{
+	if (n <= 0)
+	{
+		return 0;
+		//    cout<<1<<" ";
+	}
+	else if (n == 1)
+	{
+		return 1;
+		//    cout<<1<<" ";
+	}
+	else
+	{
+		return (fibonacci(n - 1) + fibonacci(n - 2));
+		//   cout<<fibonacci(n-1)+fibonacci(n-2)<<" ";
+	}
+}
+int main()
+{
+	int n;
+	std::cin >> n;
+	for (int x = 0; x < n; x++)
+		std::cout << fibonacci(x) << " ";
+	std::cout << std::endl;
+
+	return 0;
+}
+
+//2
+
+/*Using recursion write a function that returns a number to the power of another 
+number e.g. 2 to the power of(2 ^ 5) is 32’*/
+
+double  power(double, int);// it should be double because you also need to handle negative powers which may cause fractions
+
+int main()
+{
+	std::cout << "please enter the number to be powered up\n";
+	double number;
+	std::cin >> number;
+	std::cout << "please enter the number to be powered up\n";
+	int pow;
+	std::cin >> pow;
+	double result = power(number, pow);
+	std::cout << "answer is " << result << std::endl;
+}
+
+double power(double x, int n)
+{
+
+	if (n == 0)
+		return 1;
+	if (n >= 1)
+		
+		if (n < 0)
+			return x * power(x, n - 1);
+	return 1 / x * power(x, n + 1);
+}
