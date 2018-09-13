@@ -51,3 +51,5 @@ void main()
 	wands.cost = 100;
 	wands.quantity = 4;
 }
+
+

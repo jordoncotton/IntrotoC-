@@ -86,7 +86,6 @@ int main()
 			std::cout << myNum[i] << std::endl;
 		}
 	}
-
 	{
 		//5
 
@@ -148,114 +147,17 @@ int main()
 
 	//7
 	{
-		int days[29][5];
-		int row = 0;
-		int column;
-		int sum;
 
-		std::cout << "Enter 9 elements of 29*5" << std::endl;
 
-		for (int i = 0; i < row; i++)
-		{
-			for (int q = 0; q < 29; q++)
-			{
-				std::cin >> days[i][q];
-					days;
-			}
-		}
-		for (int i = 0; i < column; i++)
-		{
-			sum = 0;
-			for (int q = 0; q < 5; q++)
-			{
-				std::cin >> days[q][i];
-				days;
-			}
 
-		}
+
+
+
+
+
+
 
 	}
 
-	//8
-	{
-		{
-			int Health[5] = { 100, 100, 100, 100, 100 }; 
-			int Character = 0; 
-			int TimesAttacked = 0; 
-
-			while (TimesAttacked != 5) {
-				std::cout << "Select a character to take damage. Enter a number between 0 and 4: " << std::endl;
-				std::cin >> Character;
-				TimesAttacked++;
-
-				Health[Character] = Health[Character] - rand() % 100 + 1; 
-
-				if (Health[Character] <= 0) {
-					std::cout << "Could not attack, character is dead" << std::endl;
-				}
-			}
-
-			for (int i = 0; i < 5; i++) {
-				std::cout << "Parties health pools are: " << Health[i] << std::endl;
-			}
-			system("pause");
-			return 0;
-		}
-
-	}
-
-	//9
-	const int dragons = 3;
-	const int DAYS = 7;
-	int dragons++;
-	int food[dragons][DAYS];
-	int maximum = food[0][0];
-	int minimum = food[0][0];
-	float total = 0.0f;
-	float average = 0.0f;
-
-	std::cout << "Enter the amount of food consumed for each monkey on each day: " << std::endl;
-
-	for (int monk = 0; monk < dragons; monk++)
-	{
-		for (int day = 0; day < DAYS; day++)
-		{
-			std::cout << "dragons " << (monk + 1) << ", day " << (day + 1) << ": ";
-			std::cin >> food[monk][day];
-
-			total += food[monk][day];
-
-		}
-		std::cout << std::endl;
-	}
-	
-	average = total / (dragons * DAYS);
-
-	for (int monk = 0; monk < dragons; monk++)
-	{
-		for (int day = 0; day < DAYS; day++)
-		{
-			if (food[dragons][day] > maximum)
-				maximum = food[monk][day];
-		}
-
-	}
-
-	for (int dragon = 0; dragons < dragons; dragons++)
-	{
-		for (int day = 0; day < DAYS; day++)
-		{
-			if (food[dragons][day] < minimum)
-				minimum = food[dragons][day];
-		}
-
-	}
-
-	std::cout << "Report" << std::endl;
-	std::cout << "The total amount of food consumed is " << total << std::endl;
-	std::cout << "The average amount of food consumed by the monkeys each day is " << average << std::endl;
-	std::cout << "The most eaten by a monkey is " << maximum << std::endl;
-	std::cout << "The least eaten by a monkey is " << minimum << std::endl;
-	std::cout << std::endl;
 
 }
