@@ -46,3 +46,37 @@ int main()
 }
 
 //6
+
+/*Write a function for each of the following descriptions.
+For each function, use the pointer notation ONLY.
+Do NOT use the array index[] notation.*/
+
+//A
+/*Write a function RevString(char* array) which reverses array.
+The function returns nothing.*/
+
+void RevString(int arr[], char Rev)
+{
+	int temp;
+	int first;
+	int last;
+
+	first = arr;
+	last = &arr[Rev - 1];
+
+	for (int i = 0; i < Rev; i++)
+	{
+		temp = *first;
+		*first++ = *last;
+		*last-- = temp;
+	}
+}
+
+int main()
+{
+	char array[4] = { 'A' , 'B' , 'C' , 'D' };
+	char*ptr_array;
+
+	ptr_array = &array[0];
+	ReverseArray(ptr_array, 4);
+}
