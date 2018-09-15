@@ -55,7 +55,7 @@ Do NOT use the array index[] notation.*/
 /*Write a function RevString(char* array) which reverses array.
 The function returns nothing.*/
 
-void RevString(int arr[], char Rev)
+void RevString(char* array)
 {
 	int temp;
 	int first;
@@ -74,9 +74,14 @@ void RevString(int arr[], char Rev)
 
 int main()
 {
-	char array[4] = { 'A' , 'B' , 'C' , 'D' };
+	char* array[4] = { 'A' , 'B' , 'C' , 'D' };
 	char*ptr_array;
 
 	ptr_array = &array[0];
 	ReverseArray(ptr_array, 4);
 }
+
+//B
+/*Write a function CountEven(int* array, int array_len) which receives an integer
+array and its size, and returns the number of even numbers in the array*/
+
