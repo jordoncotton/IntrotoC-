@@ -1,5 +1,5 @@
 #include <iostream>
-
+//1
 int main()
 {
 	int integerVariable = 10;
@@ -15,4 +15,13 @@ int main()
 	integerVariable = 100;
 	std::cout << refpointvariable << std::endl;
 	system("pause");
+
+	int &anotherreference = integerVariable;
+	 "ref:: %1 refVariable:: % 1 \n", anotherreference, refpointvariable;
+	 //reftonothing
+	 int somethingelse = 90;
+	 integerVariable = somethingelse;
+	 system("pause");
 }
+
+
