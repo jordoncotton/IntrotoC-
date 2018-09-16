@@ -2,48 +2,27 @@
 
 //declare an array with six places inside of it.
 //Use a pointer to initialize all values int int nums to a one.
-void ReverseArray(int*ptr, int size)
-{
-	int temp;
-	int*first;
-	int*last;
+//void ReverseArray(int*ptr, int size)
+//{
+//	int temp;
+//	int*first;
+//	int*last;
+//
+//	first = ptr;
+//	last = &ptr[size - 1];
+//
+//	for (int i = 0; i < size / 2; i++)
+//	{
+//		temp = *first;
+//		*first = *last;
+//		*last = temp;
+//
+//		first++;
+//		last--;
+//	}
+//}
+//
 
-	first = ptr;
-	last = &ptr[size - 1];
-
-	for (int i = 0; i < size / 2; i++)
-	{
-		temp = *first;
-		*first = *last;
-		*last = temp;
-
-		first++;
-		last--;
-	}
-}
-
-int main()
-{
-	//{
-	//	int nums[6];
-	//	int*ptr;
-	//	
-	//	ptr = &nums[6];
-	//	for (int = i; i < 6; i++)
-	//	{
-	//		*nums = 1;
-	//		*nums++;
-	//	}
-
-	//Reverse the elements that ptr prints to;
-	//Expected result nums => 6, 4, 2;
-
-	int nums[4] = { 2, 4, 6, 8 };
-	int*ptr_nums;
-
-	ptr_nums = &nums[0];
-	ReverseArray(ptr_nums, 4);
-}
 
 //6
 
@@ -56,114 +35,96 @@ Do NOT use the array index[] notation.*/
 The function returns nothing.*/
 
 /* Utility function to print an array */
-void RevString(char* arr[], int size)
+
+void RevString(char* first)
 {
+	/*size will increase as last increases.*/
+	int temp;
+	int size = 0;
+	char* last = first;
+	/*while last is not equal to 0 it will increase.*/
+	while (*last != '\0')
 	{
-		for (int i = 0; i < size; i++)
-			std::cout << arr[i] << " ";
-
-		std::cout << std::endl;
+		last++;
+		size++;
 	}
-}
-
-void rvereseArray(int arr[], int start, int end)
-{
-	while (start < end)
+	for (int i = 0; i < size/2; i++)
 	{
-		int temp = arr[start];
-		arr[start] = arr[end];
-		arr[end] = temp;
-		start++;
-		end--;
+		temp = *first;
+		*first++ = *last;
+		*last-- = temp;
 	}
-}
-/* Function to test above functions */
-int main()
-{
-	int arr[] = { 1, 2, 3, 4, 5, 6 };
-
-	// To print original array
-	rvereseArray(arr, 6);
-
-	// Function calling
-	rvereseArray(arr, 0, 5);
-
-	std::cout << "Reversed array is" << std::endl;
-
-	// To print the Reversed array
-	rvereseArray(arr, 6);
 }
 
 //B
 /*Write a function CountEven(int* array, int array_len) which receives an integer
 array and its size, and returns the number of even numbers in the array*/
-void countEven(int* arr[], int arr_len)
+int countEven(int* arr, int arr_len)
 {
-	int countEven;
 
 	int countEven = 0;
 	for (int i = 0; i < arr_len; i++) 
 	{
-		if (arr_len[i] % 2 != 0) 
+		if (*arr % 2 != 0) 
 		{
 			countEven++;
 		}
 	}
-	return;
+	return countEven;
 }
 
 //C
 /*Write a function Maximum(double* array, int array_size) that returns a pointer to the 
 maximum value of an array of doubles.If the array is empty, return nullptr*/
 
-void Maximum(double* array, int array_size)
+double* Maximum(double* array, int array_size)
 {
-	if (array_size <= 0)
-		return;
+	if (array == nullptr)
+		return nullptr;
+	double* array2 = array;
 
-	int max = array_size;
-	
 
-	for (int i = 1; i < array_size; i++)
+	for (int i = 0; i < array_size; i++)
 	{
-		if (array_size[] > max)
+		if (*array > *array2)
 		{
-			max = array_size;
-			array = (array_size + i);
+			*array2 = *array;
+
 		}
 	}
-
-	int main()
-	{
-		int nums[4] = { 5, 3, 15, 6 };
-		int *ptr;
-
-		array = &array_size[0];
-		findMax(nums, 4, ptr);
-
-		std::cout << "The maximum is at address " << ptr << std::endl;
-		std::cout << "It's at index " << ptr - nums << std::endl;
-		std::cout << "Its value is " << *ptr << std::endl;
-	}
+	return array2;
 }
 
-//D
-/*Write a function Contains(char* array, char search_value) which returns true if the 
-1st parameter contains the 2nd parameter, or false otherwise.*/
 
-void Contains(char*array, char search_value)
+////D
+///*Write a function Contains(char* array, char search_value) which returns true if the 
+//1st parameter contains the 2nd parameter, or false otherwise.*/
+
+bool Contains(char*array, char search_value)
 {
-	char input()
+	while (*array != '\0')
 	{
-		char input[80];
-		getline(cin, choice);
-		return input;
+		if (search_value == *array)
+			return true;
+		else
+			array++;
 	}
+	return false;
+}
 
-	int main()
-	{
-		char choice[80];
-		char* pointer;
-		input(pointer);
-	}
+
+int main()
+{
+	int nums[4] = { 5, 3, 15, 6 };
+	//C
+	double array[] = {5.5, 3.5, 15.5, 6.5};
+	//A
+	char letters[9] = { 'H', 'A', 'L', 'L', 'O', 'W', 'E', 'E', 'N' };
+	char*ptr = &letters[0];
+	RevString(ptr);
+
+	//B
+	int testB[4] = {2, 3, 4, 5};
+	int*arr = &testB[0];
+	countEven(arr, 4);
 }
