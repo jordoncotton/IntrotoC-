@@ -4,30 +4,40 @@ class stack
 {
 private:
 	int values[20];
-	int count;
-	int *doodoo = &values[0];
+	int count = 0;
+	int* doodoo = &values[0];
 public:
-	int top()
+	int top(int count)
 	{
-
+		values[count];
+		count++;
+		int top = values[count - 1];
+		return count;
 	}
 
 	void pop()
 	{
-
+		
 	}
 
 	void push(int doodoo)
 	{
-		if(count < 20)
+		if (doodoo >= 0 && doodoo <= 9)
 		{
-			count++;
+			if (count < 20)
+			{
+				values[count] = doodoo;
+				count++;
+			}
 		}
 	}
 
-	bool isEmpty()
+	bool isEmpty(bool isEmpty)
 	{
+		if (isEmpty == false && count = 0)
+		{
 
+		}
 	}
 };
 
@@ -38,4 +48,5 @@ int main()
 	stack.push(20);
 }
 
-
+//for (int &i : data)
+//i = -1
