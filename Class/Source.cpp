@@ -3,6 +3,7 @@
 class stack
 {
 private:
+	char sign = '+';
 	int values[20];
 	int count = 0;
 	int* doodoo = &values[0];
@@ -30,15 +31,27 @@ public:
 				count++;
 			}
 		}
+		if (doodoo != sign)
+		{ 
+			std::cout << sign << '+' << std::endl;
+		}
+		else
+		{
+			std::cout << sign;
+		}
 	}
 
 	bool isEmpty(bool isEmpty)
 	{
-		if (isEmpty == false && count = 0)
+		while (*doodoo != '\0')
 		{
-
+			if (isEmpty == false && *doodoo == count)
+				return true;
+			else
+				isEmpty++;
 		}
-	}
+		return false;
+	}	
 };
 
 
