@@ -7,17 +7,20 @@ void Hero::Fight(Hero&hero)
 
 bool Hero::IsAlive()
 {
-	while (IsAlive != '\0')
+	if (mHealth > 0)
 	{
-		if (IsAlive == &mPower)
-		{
-			return true;
-		}
-		return false;
+		return true;
 	}
+	return false;
+	
 }
 
 void Hero::TakeDamage(int amount)
 {
-	Hero*TakeDamage(Hero);
+	mHealth -= amount;
+}
+
+char Hero::Name()
+{
+	mName = (char*) "Black DOODOO";
 }
