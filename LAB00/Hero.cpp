@@ -7,14 +7,17 @@ void Hero::Fight(Hero&hero)
 
 bool Hero::IsAlive()
 {
-	if (!IsAlive)
+	while (IsAlive != '\0')
 	{
-		return true;
+		if (IsAlive == &mPower)
+		{
+			return true;
+		}
+		return false;
 	}
-	return false;
 }
 
 void Hero::TakeDamage(int amount)
 {
-	Hero.TakeDamage(Hero);
+	Hero*TakeDamage(Hero);
 }
