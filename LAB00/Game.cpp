@@ -27,5 +27,4 @@ Hero Game::Battle(Hero&hc1, Hero&hb2)
 
 	Hero&Fight(Hero&);
 	return Hero();
-	system("pause");
 }
