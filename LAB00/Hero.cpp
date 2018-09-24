@@ -23,4 +23,5 @@ void Hero::TakeDamage(int amount)
 char Hero::Name()
 {
 	mName = (char*) "Black DOODOO";
+	return *mName;
 }

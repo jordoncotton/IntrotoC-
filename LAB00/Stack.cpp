@@ -34,3 +34,4 @@ bool Stack::IsFull()
 	return mCount == 20;
 	return false;
 }
+
