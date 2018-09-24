@@ -20,11 +20,11 @@ class Point2D
 public:
 	int x;
 	int y;
+	Point2D operator + (Point2D & other)
+	{
+		Point2D temp;
+		temp.x = +other.x;
+		temp.y = +other.y;
+		return temp;
+	}
 };
-Point2D operator + (Point2D & other)
-{
-	Point2D temp;
-	temp.x = +other.x;
-	temp.y = +other.y;
-	return temp;
-}
