@@ -20,6 +20,7 @@ bool Stack::pop()
 	}
 	return false;
 }
+
 /*will allow the console to push poopoo on to the stack
 and then add a hero to mData*/
 bool Stack::push(Hero *poopoo)

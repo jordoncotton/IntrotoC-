@@ -16,6 +16,7 @@ public:
 	bool IsAlive();
 	void TakeDamage(int);
 	int getHealth();
-	int getPower();
+	int getPower(int Strength);
+	
 };
 

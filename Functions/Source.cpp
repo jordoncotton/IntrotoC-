@@ -280,7 +280,7 @@ void playGameSingle()
 	case 2:
 		switch (cChoice)
 		{
-		case 1:std::cout << "You Win";
+		case 1: std::cout << "You Win";
 		case 2: std::cout << "Draw";
 		case 3: std::cout << "You Loose";
 		}
