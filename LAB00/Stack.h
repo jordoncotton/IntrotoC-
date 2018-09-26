@@ -8,6 +8,10 @@ private:
 	int mCount;
 
 public:
+	Stack()
+	{
+		mCount = 0;
+	}
 	Hero top();
 	bool pop();
 	bool push(Hero*);
@@ -15,16 +19,16 @@ public:
 	bool IsFull();
 };
 
-class Point2D
-{
-public:
-	int x;
-	int y;
-	Point2D operator + (Point2D & other)
-	{
-		Point2D temp;
-		temp.x = +other.x;
-		temp.y = +other.y;
-		return temp;
-	}
-};
+//class Point2D
+//{
+//public:
+//	int x;
+//	int y;
+//	Point2D operator + (Point2D & other)
+//	{
+//		Point2D temp;
+//		temp.x = +other.x;
+//		temp.y = +other.y;
+//		return temp;
+//	}
+//};

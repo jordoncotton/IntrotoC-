@@ -6,17 +6,17 @@
 class Hero
 {
 private:
-	int mHealth = 100;
-	int mPower = rand() % 100 + 1;
-	char *mName;
+	int mHealth;
+	int mPower;
+	const char *mName;
 	
 public:
 	void Fight(Hero&);
-	char Name();
+	void HeroInfo(const char* mName);
 	bool IsAlive();
 	void TakeDamage(int);
-	int getHealth();
-	int getPower(int Strength);
-	
+	int GetHealth();
+	int GetPower();
+	void PrintInfo();
 };
 

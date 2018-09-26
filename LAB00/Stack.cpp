@@ -21,12 +21,15 @@ bool Stack::pop()
 	return false;
 }
 
-/*will allow the console to push poopoo on to the stack
+/*Will allow the console to push poopoo on to the stack
 and then add a hero to mData*/
-bool Stack::push(Hero *poopoo)
+bool Stack::push(Hero* poopoo)
 {
-	mData[mCount++] = *poopoo;
-	return false;
+	if (!IsEmpty())
+	{
+		mData[mCount++] = *poopoo;
+		return false;
+	}
 }
 
 bool Stack::IsEmpty()

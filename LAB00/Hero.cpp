@@ -1,14 +1,23 @@
 #include "Hero.h"
 
 /*Hero will fight and takedamage with power doing the attack
-and givng the hero strength*/
+and making the hero lose health after taking damage*/
 void Hero::Fight(Hero&hero)
 {
-	hero.TakeDamage(mPower);
+	hero.TakeDamage(mHealth);
 }
 
-/*If the hero is alive there health will be
-greater than zero returning true*/
+/*Will allow the console to keep the heros name constant
+and print there health && power to console*/
+void Hero::HeroInfo(const char* mName)
+{
+
+	GetHealth();
+	GetPower();
+}
+
+/*If the hero is alive there health and power
+will be greater than zero returning true*/
 bool Hero::IsAlive()
 {
 	if (mHealth > 0)
@@ -20,7 +29,8 @@ bool Hero::IsAlive()
 }
 
 /*The hero will take a certain amount of 
-damage and this is where random number come in*/
+damage giving the hero a certain amount(random number)
+of health and power*/
 void Hero::TakeDamage(int amount)
 {
 	mHealth -= amount;
@@ -28,21 +38,23 @@ void Hero::TakeDamage(int amount)
 
 /*The hero will get there health also where a random
 number will generate returning the health of the hero after the 
-attacks*/
-int Hero::getHealth()
+attacks and will generate a random number*/
+int Hero::GetHealth()
 {
+	mHealth = 100;
 	return mHealth;
 }
 
 /*Where the hero will get there power to attack and have strength
-and return the power of the hero*/
-int Hero::getPower(int Strength)
+and return the power of the hero and will generate a random number*/
+int Hero::GetPower()
 {
+	mPower = rand() % 100 + 1;
 	return mPower;
 }
 
-char Hero::Name()
+void Hero::PrintInfo()
 {
-	mName = (char*) "Iron man";
-	return *mName;
+	std::cout << "His health is: " << mHealth << std::endl;
+	std::cout << "His power is: " << mPower << std::endl;
 }
