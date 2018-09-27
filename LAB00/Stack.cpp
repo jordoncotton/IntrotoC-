@@ -5,8 +5,8 @@ hero on the top function.*/
 Hero Stack::top()
 {
 	if (!IsEmpty())
-		return mData[mCount];
-	return Hero();
+		return mData[mCount -1];
+	//return Hero();
 }
 
 /*If the stack is empty we can't remove anything otherwise 
@@ -27,6 +27,7 @@ bool Stack::push(Hero* poopoo)
 {
 	if (!IsEmpty())
 	{
+
 		mData[mCount++] = *poopoo;
 		return false;
 	}

@@ -14,12 +14,13 @@ private:
 	
 public:
 	void Fight(Hero&);
-	void HeroInfo(const char* Name);
+	void HeroInfo();
 	bool IsAlive();
 	void TakeDamage(int);
 	int GetHealth();
 	int GetPower();
 	void PrintInfo();
 	void GetName(const char* Name);
+
 };
 

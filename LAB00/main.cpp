@@ -12,15 +12,17 @@ int main()
 	Hero* hc1 = new Hero();
 	Hero* hb2 = new Hero();
 
+	hc1->GetName("IronMan"); 
 	Marvels.push(hc1);
 	DCUniverse.push(hb2);
+
+	Marvels.top().HeroInfo();
+	DCUniverse.top().HeroInfo();
+
+	hc1->HeroInfo();
+	hb2->HeroInfo();
+
 	
-	Marvels.top().PrintInfo();
-	DCUniverse.top().PrintInfo();
-
-	hc1->PrintInfo();
-	hb2->PrintInfo();
-
 
 	system("pause");
 }
