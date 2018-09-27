@@ -4,7 +4,7 @@
 and making the hero lose health after taking damage.*/
 void Hero::Fight(Hero&hero)
 {
-	hero.TakeDamage(mHealth);
+	hero.TakeDamage(mPower);
 }
 
 /*Will allow the console to keep the heros name constant
@@ -12,9 +12,10 @@ and print there health && power to console.*/
 void Hero::HeroInfo(const char* Name)
 {
 	mName = Name;
-	  
+	
 	GetHealth();
 	GetPower();
+
 }
 
 /*If the hero is alive there health and power
@@ -42,22 +43,26 @@ number will generate returning the health of the hero after the
 attacks and will generate a random number.*/
 int Hero::GetHealth()
 {
-	mHealth = 100;
-	return mHealth;
+	 return mHealth = rand() % 100 + 1;
 }
 
 /*Where the hero will get there power to attack and have strength
 and return the power of the hero and will generate a random number.*/
 int Hero::GetPower()
 {
-	mPower = rand() % 3 + 1;
-	return mPower;
+	 return mPower = rand() % 20 + 1;
 }
 /*This will allow me to Print out the heros health and power
 letting the player know how much health and power that hero 
 has left.*/
 void Hero::PrintInfo()
 {
-	std::cout << "His health is: " << mHealth << rand() % 1 + 1 << std::endl;
-	std::cout << "His power is: " << mPower << rand() % 3 + 1 << std::endl;
+	std::cout << "His health is: " << GetHealth() << std::endl;
+	std::cout << "His power is: " << GetPower() << std::endl;
+}
+
+void Hero::GetName(const char* Name)
+{
+	mName = Name;
+	
 }

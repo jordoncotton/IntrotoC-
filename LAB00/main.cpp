@@ -21,5 +21,6 @@ int main()
 	hc1->PrintInfo();
 	hb2->PrintInfo();
 
+
 	system("pause");
 }

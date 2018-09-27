@@ -7,12 +7,12 @@ class Stack
 {
 private:
 	Hero mData[20];
-	int mCount = rand() % 2 + 1;
+	int mCount;
 
 public:
 	Stack()
 	{
-		mCount = rand() % 2 + 1;
+		mCount = 0;
 	}
 	Hero top();
 	bool pop();

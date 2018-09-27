@@ -8,8 +8,8 @@ print there info out in Hero.cpp (line 58) and main.cpp.*/
 class Hero
 {
 private:
-	int mHealth = rand() % 10 + 1;
-	int mPower = rand() % 35 + 1;
+	int mHealth;
+	int mPower;
 	const char *mName;
 	
 public:
@@ -20,5 +20,6 @@ public:
 	int GetHealth();
 	int GetPower();
 	void PrintInfo();
+	void GetName(const char* Name);
 };
 
