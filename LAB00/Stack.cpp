@@ -10,7 +10,7 @@ Hero Stack::top()
 }
 
 /*If the stack is empty we can't remove anything otherwise 
-we have removed that one thing that was on top*/
+we have removed that one thing that was on top.*/
 bool Stack::pop()
 {
 	if (!IsEmpty())
@@ -22,7 +22,7 @@ bool Stack::pop()
 }
 
 /*Will allow the console to push poopoo on to the stack
-and then add a hero to mData*/
+and then add a hero to mData.*/
 bool Stack::push(Hero* poopoo)
 {
 	if (!IsEmpty())
@@ -31,13 +31,15 @@ bool Stack::push(Hero* poopoo)
 		return false;
 	}
 }
-
+/*If the stack is empty then it will return counting as 
+zero if not it will return false.*/
 bool Stack::IsEmpty()
 {
 	return mCount == 0;
 	return false;
 }
-
+/*If the stack is full then it will return counting 20 if not 
+it will return false.*/
 bool Stack::IsFull()
 {
 	return mCount == 20;

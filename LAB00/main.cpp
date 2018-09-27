@@ -1,5 +1,7 @@
  #include "Game.h"
-
+/*Main will check and test and allow me to print everything in cpp so everthing will
+come out the way I want it too and able to fix whatever problem 
+I have.*/
 int main()
 {
 	srand(time(NULL));
