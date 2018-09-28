@@ -13,7 +13,6 @@ void Hero::HeroInfo()
 {
 	GetHealth();
 	GetPower();
-
 }
 
 /*If the hero is alive there health and power
@@ -42,7 +41,6 @@ attacks and will generate a random number.*/
 int Hero::GetHealth()
 {
 	return mHealth;
-	
 }
 
 /*Where the hero will get there power to attack and have strength
