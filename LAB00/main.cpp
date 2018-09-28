@@ -9,20 +9,21 @@ int main()
 	Stack Marvels;
 	Stack DCUniverse;
 
-	Hero* hc1 = new Hero();
-	Hero* hb2 = new Hero();
+	Hero* hc1 = new Hero("IronMan");
+	Hero* hb2 = new Hero("CapTain DOODOO");
 
-	hc1->GetName("IronMan"); 
 	Marvels.push(hc1);
 	DCUniverse.push(hb2);
 
-	Marvels.top().HeroInfo();
-	DCUniverse.top().HeroInfo();
+	//Marvels.top().HeroInfo();
+	//DCUniverse.top().HeroInfo();
 
-	hc1->HeroInfo();
-	hb2->HeroInfo();
+	//hc1->HeroInfo();
+	//hb2->HeroInfo();
 
-	
+	Game civilWar;
+	civilWar.Battle(Marvels.top(), DCUniverse.top());
+
 
 	system("pause");
 }

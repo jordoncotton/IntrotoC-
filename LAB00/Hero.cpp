@@ -8,7 +8,7 @@ void Hero::Fight(Hero&hero)
 }
 
 /*Will allow the console to keep the heros name constant
-and print there health && power to console.*/
+and print there health && power to console. Print*/
 void Hero::HeroInfo()
 {
 	GetHealth();
@@ -41,15 +41,15 @@ number will generate returning the health of the hero after the
 attacks and will generate a random number.*/
 int Hero::GetHealth()
 {
-	mHealth = rand() % 100 + 1;
 	return mHealth;
+	
 }
 
 /*Where the hero will get there power to attack and have strength
 and return the power of the hero and will generate a random number.*/
 int Hero::GetPower()
 {
-	 return mPower = rand() % 20 + 1;
+	return mPower;
 }
 /*This will allow me to Print out the heros health and power
 letting the player know how much health and power that hero 
@@ -60,9 +60,21 @@ void Hero::PrintInfo()
 	std::cout << "His power is: " << GetPower() << std::endl;
 }
 
-void Hero::GetName(const char* Name)
+const char* Hero::GetName()
 {
+	return mName;
+}
+
+Hero::Hero(const char* Name)
+{
+	mHealth = 100;
+	mPower = rand() % 20 + 1;
 	mName = Name;
-	
+}
+
+Hero::Hero()
+{
+	mHealth = 100;
+	mPower = rand() % 20 + 1;
 }
 

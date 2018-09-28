@@ -2,9 +2,9 @@
 /*Wraps Isempty to it only want to return the hero
 if it's not empty. Also this will be returning by putting
 hero on the top function.*/
-Hero Stack::top()
+Hero& Stack::top()
 {
-	if (!IsEmpty())
+	//if (IsEmpty() == false)
 		return mData[mCount -1];
 	//return Hero();
 }
@@ -13,7 +13,7 @@ Hero Stack::top()
 we have removed that one thing that was on top.*/
 bool Stack::pop()
 {
-	if (!IsEmpty())
+	//if (!IsEmpty())
 	{
 		mCount = mCount - 1;
 		return true;
@@ -25,19 +25,19 @@ bool Stack::pop()
 and then add a hero to mData.*/
 bool Stack::push(Hero* poopoo)
 {
-	if (!IsEmpty())
+	if (IsEmpty())
 	{
 
 		mData[mCount++] = *poopoo;
-		return false;
+		return true;
 	}
+	return false;
 }
 /*If the stack is empty then it will return counting as 
 zero if not it will return false.*/
 bool Stack::IsEmpty()
 {
-	return mCount == 0;
-	return false;
+	return (mCount == 0);
 }
 /*If the stack is full then it will return counting 20 if not 
 it will return false.*/

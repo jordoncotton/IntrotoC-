@@ -14,7 +14,7 @@ public:
 	{
 		mCount = 0;
 	}
-	Hero top();
+	Hero& top();
 	bool pop();
 	bool push(Hero*);
 	bool IsEmpty();

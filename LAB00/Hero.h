@@ -20,7 +20,8 @@ public:
 	int GetHealth();
 	int GetPower();
 	void PrintInfo();
-	void GetName(const char* Name);
-
+	const char* GetName();
+	Hero(const char*);
+	Hero();
 };
 
