@@ -15,12 +15,6 @@ int main()
 	Marvels.push(hc1);
 	DCUniverse.push(hb2);
 
-	//Marvels.top().HeroInfo();
-	//DCUniverse.top().HeroInfo();
-
-	//hc1->HeroInfo();
-	//hb2->HeroInfo();
-
 	Game civilWar;
 	civilWar.Battle(Marvels.top(), DCUniverse.top());
 

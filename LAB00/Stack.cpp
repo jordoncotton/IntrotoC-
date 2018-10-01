@@ -4,16 +4,16 @@ if it's not empty. Also this will be returning by putting
 hero on the top function.*/
 Hero& Stack::top()
 {
-	//if (IsEmpty() == false)
+	
 		return mData[mCount -1];
-	//return Hero();
+	
 }
 
 /*If the stack is empty we can't remove anything otherwise 
 we have removed that one thing that was on top.*/
 bool Stack::pop()
 {
-	//if (!IsEmpty())
+	
 	{
 		mCount = mCount - 1;
 		return true;
@@ -23,12 +23,12 @@ bool Stack::pop()
 
 /*Will allow the console to push poopoo on to the stack
 and then add a hero to mData.*/
-bool Stack::push(Hero* poopoo)
+bool Stack::push(Hero* IronMan)
 {
 	if (IsEmpty())
 	{
 
-		mData[mCount++] = *poopoo;
+		mData[mCount++] = *IronMan;
 		return true;
 	}
 	return false;
