@@ -43,5 +43,3 @@ MADMAD Clamp(MADMAD a, MADMAD b, MADMAD c)
 		return c;
 	}
 }
-
-template <
