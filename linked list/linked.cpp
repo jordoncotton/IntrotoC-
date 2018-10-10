@@ -1,62 +1,84 @@
 #include "linked.h"
 
-
-
-const T & T::operator=(T & linkedList)
+template<typename T>
+inline const T & IMFUCKED<T>::operator=(IMFUCKED & linkedList)
 {
 	// TODO: insert return statement here
 }
 
-void T::initializeList()
+template<typename T>
+inline void IMFUCKED<T>::initializeList()
 {
-	return void();
 }
 
-const bool T::isEmpty()
+template<typename T>
+inline bool IMFUCKED<T>::isEmptyList()
 {
 	return false;
 }
 
-const void T::print()
-{
-	return void();
-}
-
-const int T::length()
-{
-	return 0;
-}
-
-void T::destroyList()
+template<typename T>
+inline void IMFUCKED<T>::print()
 {
 }
 
-int T::front()
+template<typename T>
+inline int IMFUCKED<T>::length()
 {
 	return 0;
 }
 
-int T::back()
+template<typename T>
+inline void IMFUCKED<T>::destroyList()
+{
+}
+
+template<typename T>
+inline int IMFUCKED<T>::front()
 {
 	return 0;
 }
 
-const bool T::search()
+template<typename T>
+inline int IMFUCKED<T>::back()
+{
+	return 0;
+}
+
+template<typename T>
+inline const bool IMFUCKED<T>::search(const IMFUCKED & linkedList)
 {
 	return false;
 }
 
-const void T::insertFirst()
+template<typename T>
+inline int IMFUCKED<T>::begin(const T & linkedListIterator)
 {
-	return void();
+	return 0;
 }
 
-const void T::insertLast()
+template<typename T>
+inline int IMFUCKED<T>::end(const T & linkedListIterator)
 {
-	return void();
+	return 0;
 }
 
-const void T::deleteNode()
+template<typename T>
+inline IMFUCKED<T>::IMFUCKED()
 {
-	return void();
+}
+
+template<typename T>
+inline IMFUCKED<T>::IMFUCKED(const IMFUCKED<T>&)
+{
+}
+
+template<typename T>
+inline IMFUCKED<T>::~IMFUCKED()
+{
+}
+
+template<typename T>
+inline void IMFUCKED<T>::copyList(const T & linkedList)
+{
 }

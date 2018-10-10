@@ -118,6 +118,7 @@
     <ClCompile Include="linked.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="iterator.h" />
     <ClInclude Include="linked.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,30 +1,37 @@
 #pragma once
 #include <iostream>
 
-class T
+template <typename T>
+
+class IMFUCKED
 {
-public:
+protected:
 	int count;
+	nodeType<T>*first;
+	nodeType<T>*last;
 
-	T*first;
-	T*last;
-
-	const T & operator = (T & linkedList);
-
+public:
+	const T & operator = (IMFUCKED & linkedList);
 	void initializeList();
-	const bool isEmpty();
-	const void print();
-	const int length();
+	bool isEmptyList();
+	void print();
+	int length();
 	void destroyList();
 
 	int front();
 	int back();
-	const bool search();
+	const bool search(const IMFUCKED & linkedList);
 
-	const void insertFirst();
-	const void insertLast();
+	void insertFirst(const T & linkedList) = 0;
+	void insertLast(const T & linkedList) = 0;
+	void deleteNode(const T & linkedList) = 0;
 
-	const void deleteNode();
+	int begin(const T & linkedListIterator);
+	int end(const T & linkedListIterator);
 
-	
+	IMFUCKED();
+	IMFUCKED(const IMFUCKED <T> &);
+	~IMFUCKED();
+private:
+	void copyList(const T & linkedList);
 };
