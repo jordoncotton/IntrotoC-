@@ -1,7 +1,9 @@
 #pragma once
 #include <iostream>
 
+
 template <typename type>
+
 class HEADACHE
 {
 public:
