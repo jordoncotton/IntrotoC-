@@ -29,7 +29,7 @@
     <ClInclude Include="iterator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\templates\nodeType.h">
+    <ClInclude Include="nodetype.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

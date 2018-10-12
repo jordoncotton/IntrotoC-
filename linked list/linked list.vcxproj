@@ -119,9 +119,9 @@
     <ClCompile Include="linked.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\templates\nodeType.h" />
     <ClInclude Include="iterator.h" />
     <ClInclude Include="linked.h" />
+    <ClInclude Include="nodetype.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -4,19 +4,19 @@
 
 template <typename type>
 
-class HEADACHE
+class node
 {
 public:
-	HEADACHE();
-	HEADACHE(HEADACHE <type>);
+	node();
+	node(node <type>);
 
 	type operator*();
-	HEADACHE<type> operator++();
-	const bool operator==(const HEADACHE<type>&);
-	const bool operator!=(const HEADACHE<type>&);
+	node<type> operator++();
+	const bool operator==(const node<type>&);
+	const bool operator!=(const node<type>&);
 
 private:
-	*current HEADACHE<type>;
+	*current node <type>;
 };
 
 

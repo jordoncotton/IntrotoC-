@@ -1,18 +1,18 @@
 #pragma once
 #include <iostream>
-#include "nodeType.h"
+#include "nodetype.h"
 
 template <typename T>
 
-class IMFUCKED
+class linked
 {
 protected:
 	int count;
-	HEADACHE<T> *first;
-	HEADACHE<T> *last;
+	node<T> *first;
+	node<T> *last;
 
 public:
-	const T & operator = (IMFUCKED & linkedList);
+	const T & operator = (linked & linkedList);
 	void initializeList();
 	bool isEmptyList();
 	void print();
@@ -21,7 +21,7 @@ public:
 
 	int front();
 	int back();
-	const bool search(const IMFUCKED & linkedList);
+	const bool search(const linked & linkedList);
 
 	void insertFirst(const T & linkedList) = 0;
 	void insertLast(const T & linkedList) = 0;
@@ -30,9 +30,9 @@ public:
 	int begin(const T & linkedListIterator);
 	int end(const T & linkedListIterator);
 
-	IMFUCKED();
-	IMFUCKED(const IMFUCKED <T> &);
-	~IMFUCKED();
+	linked();
+	linked(const linked <T> &);
+	~linked();
 private:
 	void copyList(const T & linkedList);
 };

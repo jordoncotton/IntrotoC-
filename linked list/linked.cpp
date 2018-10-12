@@ -1,85 +1,85 @@
 #include "linked.h"
 
 template<typename T>
-inline const T & IMFUCKED<T>::operator=(IMFUCKED & linkedList)
+inline const T & linked<T>::operator=(linked & linkedList)
 {
-	return IMFUCKED;
+	return linked;
 	// TODO: insert return statement here
 }
 
 template<typename T>
-inline void IMFUCKED<T>::initializeList()
+inline void linked<T>::initializeList()
 {
 }
 
 template<typename T>
-inline bool IMFUCKED<T>::isEmptyList()
-{
-	return false;
-}
-
-template<typename T>
-inline void IMFUCKED<T>::print()
-{
-}
-
-template<typename T>
-inline int IMFUCKED<T>::length()
-{
-	return 0;
-}
-
-template<typename T>
-inline void IMFUCKED<T>::destroyList()
-{
-}
-
-template<typename T>
-inline int IMFUCKED<T>::front()
-{
-	return 0;
-}
-
-template<typename T>
-inline int IMFUCKED<T>::back()
-{
-	return 0;
-}
-
-template<typename T>
-inline const bool IMFUCKED<T>::search(const IMFUCKED & linkedList)
+inline bool linked<T>::isEmptyList()
 {
 	return false;
 }
 
 template<typename T>
-inline int IMFUCKED<T>::begin(const T & linkedListIterator)
+inline void linked<T>::print()
+{
+}
+
+template<typename T>
+inline int linked<T>::length()
 {
 	return 0;
 }
 
 template<typename T>
-inline int IMFUCKED<T>::end(const T & linkedListIterator)
+inline void linked<T>::destroyList()
+{
+}
+
+template<typename T>
+inline int linked<T>::front()
 {
 	return 0;
 }
 
 template<typename T>
-inline IMFUCKED<T>::IMFUCKED()
+inline int linked<T>::back()
+{
+	return 0;
+}
+
+template<typename T>
+inline const bool linked<T>::search(const linked &linkedList)
+{
+	return false;
+}
+
+template<typename T>
+inline int linked<T>::begin(const T & linkedListIterator)
+{
+	return 0;
+}
+
+template<typename T>
+inline int linked<T>::end(const T & linkedListIterator)
+{
+	return 0;
+}
+
+template<typename T>
+inline linked<T>::linked()
 {
 }
 
 template<typename T>
-inline IMFUCKED<T>::IMFUCKED(const IMFUCKED<T>&)
+inline linked<T>::linked(const linked<T>&)
 {
 }
 
 template<typename T>
-inline IMFUCKED<T>::~IMFUCKED()
+inline linked<T>::~linked()
 {
 }
 
 template<typename T>
-inline void IMFUCKED<T>::copyList(const T & linkedList)
+inline void linked<T>::copyList(const T & linkedList)
 {
 }
