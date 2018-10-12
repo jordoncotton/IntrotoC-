@@ -18,12 +18,18 @@
     <ClCompile Include="linked.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\templates\nodeType.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="linked.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="iterator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\templates\nodeType.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

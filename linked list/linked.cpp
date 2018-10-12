@@ -3,6 +3,7 @@
 template<typename T>
 inline const T & IMFUCKED<T>::operator=(IMFUCKED & linkedList)
 {
+	return IMFUCKED;
 	// TODO: insert return statement here
 }
 

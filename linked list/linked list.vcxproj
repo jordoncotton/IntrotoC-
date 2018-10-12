@@ -115,9 +115,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\templates\nodeType.cpp" />
     <ClCompile Include="linked.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\templates\nodeType.h" />
     <ClInclude Include="iterator.h" />
     <ClInclude Include="linked.h" />
   </ItemGroup>

@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "nodeType.h"
 
 template <typename T>
 
@@ -7,8 +8,8 @@ class IMFUCKED
 {
 protected:
 	int count;
-	nodeType<T>*first;
-	nodeType<T>*last;
+	HEADACHE<T> *first;
+	HEADACHE<T> *last;
 
 public:
 	const T & operator = (IMFUCKED & linkedList);
