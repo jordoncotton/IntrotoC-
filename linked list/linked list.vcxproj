@@ -120,10 +120,7 @@
     <ClInclude Include="node.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Iterator.cpp" />
-    <ClCompile Include="link.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="node.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
