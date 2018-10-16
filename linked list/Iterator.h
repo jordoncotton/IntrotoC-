@@ -21,13 +21,13 @@ private:
 template<typename I>
 inline Iterator<I>::Iterator()
 {
-
+	current = this->I operator*;
 }
 
 template<typename I>
 inline Iterator<I>::Iterator(nodeType<I>* ptr)
 {
-
+	current = ptr;
 }
 
 template<typename I>

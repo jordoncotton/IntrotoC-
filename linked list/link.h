@@ -46,7 +46,7 @@ inline link<L>::operator=(const link<L>&)
 template<typename L>
 void link<L>::initializedList()
 {
-	 
+	copyList = 
 }
 
 template<typename L>
