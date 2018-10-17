@@ -1,18 +1,15 @@
 #pragma once
-#include <iostream>
-#include "node.h"
 #include "Iterator.h"
 
 template <typename L>
-
 class link
 {
 public:
 	int count;
-	nodeType *first <L>;
-	nodeType *last <L>;
+	nodeType <L> *first;
+	nodeType <L> *last;
 
-	operator= (const link <L>&);
+	Iterator<L> operator= (const link <L>&);
 	void initializedList();
 	const bool isEmptyList();
 	const void print();
@@ -26,8 +23,8 @@ public:
 	void insertLast(const L&) = 0;
 	void deleteNode(const L&) = 0;
 	
-	Iterator<L> begin();
-	Iterator<L> end();
+	Iterator<L>begin();
+	Iterator<L>end();
 
 	link();
 	link(const link<L>&);
@@ -38,7 +35,7 @@ private:
 };
 
 template<typename L>
-inline link<L>::operator=(const link<L>&)
+Iterator<L>link<L>::operator=(const link<L>&)
 {
 	*current = nullptr;
 }
@@ -46,7 +43,7 @@ inline link<L>::operator=(const link<L>&)
 template<typename L>
 void link<L>::initializedList()
 {
-	copyList = 
+	
 }
 
 template<typename L>
@@ -70,6 +67,7 @@ const int link<L>::length()
 template<typename L>
 void link<L>::destroyList()
 {
+
 }
 
 template<typename L>
@@ -85,33 +83,37 @@ L link<L>::back()
 }
 
 template<typename L>
-inline link<L> link<L>::begin()
+Iterator<L> link<L> link<L>::begin()
 {
 	return link<L>();
 }
 
 template<typename L>
-inline link<L> link<L>::end()
+Iterator<L>link<L>::end()
 {
 	return link<L>();
 }
 
 template<typename L>
-inline link<L>::link()
+link<L>::link()
 {
+
 }
 
 template<typename L>
-inline link<L>::link(const link<L>&)
+link<L>::link(const link<L>&)
 {
+
 }
 
 template<typename L>
-inline link<L>::~link()
+link<L>::~link()
 {
+
 }
 
 template<typename L>
-inline void link<L>::copyList(const link<L>&)
+void link<L>::copyList(const link<L>&)
 {
+
 }
