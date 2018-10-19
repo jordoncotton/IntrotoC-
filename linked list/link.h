@@ -37,13 +37,17 @@ private:
 template<typename L>
 Iterator<L>link<L>::operator=(const link<L>&)
 {
-	*current = nullptr;
+	current = nullptr;
 }
 
 template<typename L>
 void link<L>::initializedList()
 {
-	
+	Node* node = new Node();
+	node->current = current;
+	node->next = this->head;
+	this->head = node;
+	this->length++;
 }
 
 template<typename L>
@@ -55,6 +59,14 @@ const bool link<L>::isEmptyList()
 template<typename L>
 const void link<L>::print()
 {
+	Node* head = this->head;
+	int i = 1;
+	while (head)
+	{
+		std::cout << i << ": " << head->data << std::endl;
+		head = head->next;
+		i++;
+	}
 	return void();
 }
 
@@ -83,7 +95,7 @@ L link<L>::back()
 }
 
 template<typename L>
-Iterator<L> link<L> link<L>::begin()
+Iterator<L> link<L>::begin()
 {
 	return link<L>();
 }
@@ -103,13 +115,14 @@ link<L>::link()
 template<typename L>
 link<L>::link(const link<L>&)
 {
-
+	this->length = 0;
+	this->head = NULL;
 }
 
 template<typename L>
 link<L>::~link()
 {
-
+	std::cout << "LIST DELETED";
 }
 
 template<typename L>

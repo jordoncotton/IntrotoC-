@@ -19,37 +19,38 @@ private:
 };
 
 template<typename I>
-inline Iterator<I>::Iterator()
+Iterator<I>::Iterator()
 {
+
 }
 
 template<typename I>
-inline Iterator<I>::Iterator(nodeType<I>* ptr)
+Iterator<I>::Iterator(nodeType<I>* ptr)
 {
-	
+	current = *ptr;
 }
 
 template<typename I>
-Iterator<I> Iterator<I>::operator*()
+I Iterator<I>::operator*()
 {
-	current = current->next;
-	return *this;
+	return current->info;
 }
 
 template<typename I>
 Iterator<I> Iterator<I>::operator++()
 {
+	current = next;
 	return;
 }
 
 template<typename I>
-inline const bool Iterator<I>::operator==(const Iterator<I>&)
+const bool Iterator<I>::operator==(const Iterator<I>&)
 {
 	return false;
 }
 
 template<typename I>
-inline const bool Iterator<I>::operator!=(const Iterator<I>&)
+const bool Iterator<I>::operator!=(const Iterator<I>&)
 {
 	return false;
 }
