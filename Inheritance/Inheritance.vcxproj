@@ -119,6 +119,7 @@
     <ClInclude Include="transportVehicle.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\linked list\main.cpp" />
     <ClCompile Include="car.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="transportVehicle.cpp" />
