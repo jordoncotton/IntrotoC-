@@ -21,7 +21,7 @@ private:
 template<typename I>
 Iterator<I>::Iterator()
 {
-
+	current = nullptr;
 }
 
 template<typename I>
@@ -39,18 +39,31 @@ I Iterator<I>::operator*()
 template<typename I>
 Iterator<I> Iterator<I>::operator++()
 {
-	current = next;
-	return;
+	current = current->next;
 }
 
 template<typename I>
-const bool Iterator<I>::operator==(const Iterator<I>&)
+const bool Iterator<I>::operator==(const Iterator<I>&somethingelse)
 {
-	return false;
+	if (current == somethingelse.current)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
 
 template<typename I>
-const bool Iterator<I>::operator!=(const Iterator<I>&)
+const bool Iterator<I>::operator!=(const Iterator<I>&everything)
 {
-	return false;
+	if (current != everything.current)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }

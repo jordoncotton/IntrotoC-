@@ -2,14 +2,14 @@
 #include "Iterator.h"
 
 template <typename L>
-class link
+class list
 {
 public:
 	int count;
 	nodeType <L> *first;
 	nodeType <L> *last;
 
-	Iterator<L> operator= (const link <L>&);
+	Iterator<L> operator= (const list <L>&);
 	void initializedList();
 	const bool isEmptyList();
 	const void print();
@@ -26,107 +26,126 @@ public:
 	Iterator<L>begin();
 	Iterator<L>end();
 
-	link();
-	link(const link<L>&);
-	~link();
+	list();
+	list(const list<L>&);
+	~list();
 
 private:
-	void copyList(const link<L>&);
+	void copyList(const list<L>&);
 };
 
 template<typename L>
-Iterator<L>link<L>::operator=(const link<L>&)
+Iterator<L>list<L>::operator=(const list<L>&elsewhere)
 {
-	current = nullptr;
+	copyList(elsewhere);
 }
 
 template<typename L>
-void link<L>::initializedList()
+void list<L>::initializedList()
 {
-	Node* node = new Node();
-	node->current = current;
-	node->next = this->head;
-	this->head = node;
-	this->length++;
+	first = nullptr;
+	last = nullptr;
+	count = 0;
 }
 
 template<typename L>
-const bool link<L>::isEmptyList()
+const bool list<L>::isEmptyList()
 {
-	return false;
-}
-
-template<typename L>
-const void link<L>::print()
-{
-	Node* head = this->head;
-	int i = 1;
-	while (head)
+	if (count == 0)
 	{
-		std::cout << i << ": " << head->data << std::endl;
-		head = head->next;
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+	
+}
+
+template<typename L>
+const void list<L>::print()
+{
+	nodeType<L>* start = this->first;
+	int i = 1;
+	while (start != last)
+	{
+		std::cout << i << ": " << start->data << std::endl;
+		start = start->next;
 		i++;
 	}
-	return void();
 }
 
 template<typename L>
-const int link<L>::length()
+const int list<L>::length()
 {
-	return 0;
+	return count;
 }
 
 template<typename L>
-void link<L>::destroyList()
+void list<L>::destroyList()
 {
+	nodeType<L>*start = this->first;
+	start = start->next;
+	nodeType<L>*trail = this->first;
 
+	while (trail != last)
+	{
+		delete trail;
+		trail = start;
+		start = start->next;
+		count--;
+	}
 }
 
 template<typename L>
-L link<L>::front()
+L list<L>::front()
 {
-	return L();
+	return first->info;
 }
 
 template<typename L>
-L link<L>::back()
+L list<L>::back()
 {
-	return L();
+	return last->info;
 }
 
 template<typename L>
-Iterator<L> link<L>::begin()
+Iterator<L> list<L>::begin()
 {
-	return link<L>();
+	Iterator<L> *node = new Iterator<L>(first);
+	return node;
 }
 
 template<typename L>
-Iterator<L>link<L>::end()
+Iterator<L>list<L>::end()
 {
-	return link<L>();
+	Iterator<L> *node = new Iterator<L>(last);
+	return node;
 }
 
 template<typename L>
-link<L>::link()
+list<L>::list()
 {
-
+	initializedList();
 }
 
 template<typename L>
-link<L>::link(const link<L>&)
+list<L>::list(const list<L>&something)
 {
-	this->length = 0;
-	this->head = NULL;
+	copyList(something);
 }
 
 template<typename L>
-link<L>::~link()
+list<L>::~list()
 {
-	std::cout << "LIST DELETED";
+	first = nullptr;
+	last = nullptr;
+	destroyList();
 }
 
 template<typename L>
-void link<L>::copyList(const link<L>&)
+void list<L>::copyList(const list<L>&other)
 {
-
+	first = other;
+	last = other;
 }
